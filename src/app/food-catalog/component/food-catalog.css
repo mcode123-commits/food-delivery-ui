@@ -1,0 +1,88 @@
+.restaurant-details {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkout-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkout-button:hover {
+  background-color: #3e8e41;
+}
+
+.checkout-button:active {
+  background-color: #367832;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.item-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.item-price {
+  font-size: 14px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minus-button,
+.plus-button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.minus-button:hover,
+.plus-button:hover {
+  background-color: #006080;
+}
+
+.quantity-label {
+  min-width: 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}

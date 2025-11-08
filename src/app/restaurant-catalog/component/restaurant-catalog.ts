@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Restaurant } from '../../common/models/restaurant';
+import { Restaurant } from '../../common/model/restaurant';
 import { RestaurantService } from '../service/restaurant-catalog.service';
 import { CommonModule } from '@angular/common';
 
@@ -35,6 +35,6 @@ export class RestaurantCatalog implements OnInit {
   }
 
   onButtonClick(id: number) {
-    this.router.navigate(['/restaurant-catalog', id]);
+    this.router.navigate(['/app-food-catalog', id]);
   }
 }

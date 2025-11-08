@@ -1,1 +1,40 @@
-<p>food-catalog works!</p>
+<div class="restaurant-details" *ngIf="itemResponse as data">
+  <div class="restaurant-header">
+    <h1>{{ data.restaurant.name }}</h1>
+    <button class="checkout-button" (click)="onCheckOut()">
+      <i class="fas fa-shopping-cart"></i>
+      Checkout
+    </button>
+  </div>
+
+  <p>{{ data.restaurant.restaurantInfo }}</p>
+
+  <h2>Item Menu</h2>
+
+  <!-- Debug line: you should see "1" here -->
+  <p>Items: {{ data.itemList?.length }}</p>
+
+  <div class="item-list">
+    <div
+      class="item-item"
+      *ngFor="let item of data.itemList; trackBy: trackByItemId"
+    >
+      <div class="item-details">
+        <div class="item-name">{{ item.itemName }}</div>
+        <div class="item-price">€ {{ item.price }}</div>
+      </div>
+
+      <div class="item-quantity">
+        <button
+          class="minus-button"
+          *ngIf="(item.quantity ?? 0) > 0"
+          (click)="decrement(item)"
+        >
+          -
+        </button>
+        <div class="quantity-label">{{ item.quantity ?? 0 }}</div>
+        <button class="plus-button" (click)="increment(item)">+</button>
+      </div>
+    </div>
+  </div>
+</div>
