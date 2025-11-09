@@ -3,5 +3,5 @@ export interface Restaurant {
   name?: string;
   address?: string;
   city?: string;
-  restaurantInfo: string;
+  restaurantInfo?: string;
 }
