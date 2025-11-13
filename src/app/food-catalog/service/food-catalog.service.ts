@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { API_URL_FOOD_CATALOG } from '../../constants/url/url';
+import { K8ExternalIp } from '../../constants/url/url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
-  private apiUrl = API_URL_FOOD_CATALOG + '/foodCatalog/fetchItemsByRestaurantId/'; 
+  private apiUrl = K8ExternalIp + '/foodCatalog/fetchItemsByRestaurantId/'; 
 
     constructor(private http: HttpClient) { }
 
