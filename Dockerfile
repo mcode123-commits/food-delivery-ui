@@ -21,7 +21,7 @@ FROM nginx:alpine
 
 # Copy the built Angular files from the build stage into Nginx's default web root
 # (dist folder name must match your Angular output path: "food-delivery-ui" here)
-COPY --from=build /app/dist/food-delivery-ui /usr/share/nginx/html
+COPY --from=build /app/dist/food-delivery-ui/browser /usr/share/nginx/html
 
 # Document that the container will listen on port 80 (HTTP)
 EXPOSE 80
