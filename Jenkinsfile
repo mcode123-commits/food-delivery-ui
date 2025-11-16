@@ -54,7 +54,7 @@ pipeline {
 
                 script {
                     sh """
-                        sed -i "s|image:.*|image: mankusmichal/food-delivery-ui:${VERSION}|" aws/angular-manifest.yml
+                        sed -i "s|image:.*|image: mankusmichal/food-delivery-ui:${VERSION}|" aws/k8s/angular-manifest.yml
                     """
 
                     sh '''
